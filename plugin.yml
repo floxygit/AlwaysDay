@@ -1,0 +1,7 @@
+---
+name: AlwaysDay
+version: 1.0.0
+main: floxy\AlwaysDay\Main
+api: 5.0.0
+src-namespace-prefix: floxy\AlwaysDay
+...
