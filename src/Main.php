@@ -14,14 +14,12 @@ class Main extends PluginBase implements Listener {
     public function onEnable(): void {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
 
-        // Bestehende Welten sofort auf permanenten Tag setzen
         foreach ($this->getServer()->getWorldManager()->getWorlds() as $world) {
             $this->setAlwaysDay($world);
         }
     }
 
     public function onWorldLoad(WorldLoadEvent $event): void {
-        // Neu geladene Welten auch auf permanenten Tag setzen
         $this->setAlwaysDay($event->getWorld());
     }
 
